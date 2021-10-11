@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="290.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.SelectDirPane">
+	<children>
+      <TextField fx:id="wormLocalVideoPathText" editable="false" layoutX="127.0" layoutY="69.0" prefHeight="27.0" prefWidth="366.0" />
+      <Button fx:id="chooseDirButton" layoutX="506.0" layoutY="70.0" mnemonicParsing="false" text="..." />
+      <Button fx:id="removeWormDirButton" layoutX="542.0" layoutY="69.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="18.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/remove.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="downloadButton" layoutX="419.0" layoutY="111.0" mnemonicParsing="false" text="Download Video Files" />
+      <Label layoutX="14.0" layoutY="75.0" text="Images Directory:" />
+      <ProgressBar fx:id="downloadProgress" layoutX="58.0" layoutY="151.0" prefHeight="20.0" prefWidth="475.0" progress="0.0" />
+      <Button fx:id="cancelDownloadButton" layoutX="244.0" layoutY="181.0" mnemonicParsing="false" text="Cancel Download" />
+      <Label fx:id="validDirLabel" layoutX="127.0" layoutY="103.0" text="Pleae enter a valid image directory" textFill="#cd0404" />
+      <Label layoutX="13.0" layoutY="14.0" prefHeight="40.0" prefWidth="531.0" text="Please select the directory where the worm image files are stored.  If you don't have this directory, please create a new directory and select 'Download Video Files.'" wrapText="true" />
+      <RadioButton fx:id="loadExistingRadio" layoutX="19.0" layoutY="215.0" mnemonicParsing="false" text="Load existing annotations" />
+      <RadioButton fx:id="skipLoadExistingRadio" layoutX="19.0" layoutY="244.0" mnemonicParsing="false" selected="true" text="Skip loading existing annotations" />
+	</children>
+</AnchorPane>

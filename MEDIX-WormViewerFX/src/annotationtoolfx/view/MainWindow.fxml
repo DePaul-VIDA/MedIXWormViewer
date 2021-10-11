@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="pane" prefHeight="750.0" prefWidth="1477.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.MainWindow">
+   <children>
+      <SplitPane id="pane" dividerPositions="0.616271186440678" prefHeight="750.0" prefWidth="1477.0" stylesheets="@../application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="pane" minHeight="0.0" minWidth="0.0" prefHeight="822.0" prefWidth="882.0" stylesheets="@../application.css">
+               <children>
+                  <SplitPane id="pane" dividerPositions="0.15609756097560976" orientation="VERTICAL" prefHeight="830.0" prefWidth="906.0" stylesheets="@../application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="pane" fx:id="annotatePane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="903.0" stylesheets="@../application.css" SplitPane.resizableWithParent="false">
+                           <children>
+                              <Button id="round-button" fx:id="startButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" stylesheets="@../application.css" text="Start an annotation" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="21.0">
+                                 <font>
+                                    <Font name="System Font" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="222.0" layoutY="26.0" text="New Annotation:" AnchorPane.leftAnchor="222.0" AnchorPane.topAnchor="26.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="combo-box-style" fx:id="selectedAnnotationCombo" layoutX="372.0" layoutY="24.0" prefHeight="27.0" prefWidth="173.0" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="24.0" />
+                              <Button id="round-button" fx:id="updateButton" layoutX="603.0" layoutY="22.0" mnemonicParsing="false" text="Update Annotations" AnchorPane.leftAnchor="603.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="System Font" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="40.0" layoutY="75.0" text="Begin annotation at:" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="75.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="beginAnnText" disable="true" layoutX="196.0" layoutY="73.0" prefHeight="27.0" prefWidth="97.0" AnchorPane.leftAnchor="196.0" AnchorPane.topAnchor="73.0" />
+                              <Label layoutX="476.0" layoutY="76.0" text="End annotation at:" AnchorPane.leftAnchor="476.0" AnchorPane.topAnchor="76.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button id="round-button" fx:id="setToCurrentButton" layoutX="304.0" layoutY="73.0" mnemonicParsing="false" text="Set to current frame" AnchorPane.leftAnchor="304.0" AnchorPane.topAnchor="73.0" />
+                              <TextField fx:id="endAnnText" disable="true" layoutX="626.0" layoutY="72.0" prefHeight="27.0" prefWidth="97.0" AnchorPane.leftAnchor="626.0" AnchorPane.topAnchor="72.0" />
+                              <Button id="round-button" fx:id="cancelButton" layoutX="785.0" layoutY="22.0" mnemonicParsing="false" text="Cancel" AnchorPane.leftAnchor="785.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="System Font" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="pane" fx:id="videoPane" minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="903.0" stylesheets="@../application.css" SplitPane.resizableWithParent="true">
+                           <children>
+                              <ImageView fx:id="wormImageView" fitHeight="522.0" fitWidth="689.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="159.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="7.0" />
+                              <Label layoutX="24.0" layoutY="575.0" text="Frame:" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="24.0" />
+                              <TextField fx:id="frameNoText" layoutX="84.0" layoutY="570.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="84.0" />
+                              <Button id="round-button" fx:id="goButton" layoutX="260.0" layoutY="572.0" mnemonicParsing="false" stylesheets="@../application.css" text="Go to frame..." AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="260.0" />
+                              <Button id="round-button" fx:id="back10Button" layoutX="395.0" layoutY="540.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="395.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/back10.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="backButton" layoutX="445.0" layoutY="520.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="445.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/back.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="pauseButton" layoutX="495.0" layoutY="570.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="495.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/pause.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="playButton" layoutX="495.0" layoutY="570.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="495.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/play.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="forwardButton" layoutX="545.0" layoutY="570.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="545.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/forward.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="forward10Button" layoutX="595.0" layoutY="570.0" mnemonicParsing="false" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="595.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/forward10.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Label layoutX="24.0" layoutY="614.0" text="Delay (ms):" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="24.0" />
+                              <TextField fx:id="delayText" layoutX="111.0" layoutY="609.0" prefHeight="27.0" prefWidth="138.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="111.0" />
+                              <Label fx:id="fpsValLabel" layoutX="260.0" layoutY="614.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="260.0" />
+                              <Label layoutX="304.0" layoutY="614.0" text="fps" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="304.0" />
+                              <Label layoutX="334.0" layoutY="614.0" text="Video Speed:" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="334.0" />
+                              <Button id="round-button" fx:id="plusButton" layoutX="422.0" layoutY="609.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="422.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/plus.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <Button id="round-button" fx:id="minusButton" layoutX="470.0" layoutY="609.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="470.0">
+                              	<graphic>
+						        	<ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+						               <image>
+						                  <Image url="@../../res/minus.png" />
+						               </image>
+						            </ImageView>
+						         </graphic>
+						      </Button>
+                              <CheckBox fx:id="pauseOnDiffCheck" layoutX="719.0" layoutY="445.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="173.0" selected="true" text="Pause when difference detected" wrapText="true" AnchorPane.bottomAnchor="139.0" AnchorPane.rightAnchor="11.0" />
+                              <Button id="round-button" fx:id="prevButton" layoutX="740.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="74.0" text="Prev Diff" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="105.0" AnchorPane.rightAnchor="89.0" />
+                              <Button id="round-button" fx:id="nextButton" layoutX="822.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="74.0" text="Next Diff" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="105.0" AnchorPane.rightAnchor="7.0" />
+                              <Button id="round-button" fx:id="saveButton" layoutX="772.0" layoutY="616.0" mnemonicParsing="false" text="Save" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="83.0" />
+                              <Button id="round-button" fx:id="exportButton" layoutX="830.0" layoutY="616.0" mnemonicParsing="false" text="Export" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                              <AnchorPane fx:id="frameInfoPane" layoutX="704.0" prefHeight="264.0" prefWidth="200.0">
+                                 <children>
+                                    <Label id="ann-info-labels" fx:id="frameNoLabel" layoutX="2.0" layoutY="3.0" text="Frame no:" underline="true" />
+                                    <Label id="ann-info-values" fx:id="frameNoValueLabel" layoutX="112.0" layoutY="26.0" text="000000" />
+                                    <Label id="ann-info-labels" fx:id="elapsedTimeLabel" layoutX="1.0" layoutY="50.0" text="Elapsed Time:" underline="true" />
+                                    <Label id="ann-info-values" fx:id="elapsedTimeValueLabel" layoutX="94.0" layoutY="77.0" text="0.000000" />
+                                    <Label id="ann-info-labels" fx:id="expertAnnotationLabel" layoutX="-1.0" layoutY="96.0" text="Expert:" underline="true" />
+                                    <Label id="ann-info-values" fx:id="humanAnnValueLabel" layoutX="4.0" layoutY="124.0" text="Backward-ReverseShort" />
+                                    <Label id="ann-info-labels" fx:id="predictedAnnotationLabel" layoutY="154.0" text="Predicted:" underline="true" />
+                                    <Label id="ann-info-values" fx:id="predictedAnnValueLabel" layoutX="3.0" layoutY="180.0" text="Backward-ReverseShort" />
+                                    <Label id="ann-info-labels" fx:id="updatedAnnotationLabel" layoutX="1.0" layoutY="213.0" text="Updated:" underline="true" />
+                                    <Label id="ann-info-values" fx:id="updatedAnnValueLabel" layoutX="5.0" layoutY="244.0" text="Backward-ReverseShort" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="chartPane" layoutX="574.0" maxHeight="264.0" maxWidth="322.0" prefHeight="264.0" prefWidth="322.0" visible="false">
+                                 <children>
+                                    <ScatterChart layoutX="1.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </ScatterChart>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pipPane" layoutX="585.0" prefHeight="315.0" prefWidth="320.0" visible="false">
+                                 <children>
+                                    <Button id="round-button" fx:id="pipForwardButton" layoutX="120.0" layoutY="250.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../forward.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="round-button" fx:id="pipPlayButton" layoutX="160.0" layoutY="250.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../play.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="round-button" fx:id="pipPauseButton" layoutX="200.0" layoutY="250.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../pause.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../back.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button id="round-button" fx:id="pipBackButton" layoutX="240.0" layoutY="250.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../back.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="240.0" fitWidth="320.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="16.0" layoutY="284.0" text="Frame No:" />
+                                    <Label fx:id="pipFrameNoValue" layoutX="87.0" layoutY="285.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="frameDoesntExistLabel" layoutX="354.0" layoutY="198.0" text="Frame Doesn't Exist" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane id="pane" minHeight="0.0" minWidth="0.0" prefHeight="822.0" prefWidth="559.0" stylesheets="@../application.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="21.0" text="Annotations:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="21.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="annotationsTableView" layoutX="18.0" layoutY="50.0" prefHeight="751.0" prefWidth="532.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="50.0">
+                    <columns>
+                      <TableColumn fx:id="frameNoCol" prefWidth="75.0" text="Frame No" />
+                      <TableColumn fx:id="expertAnnCol" prefWidth="137.0" text="Expert Annotation" />
+                      <TableColumn fx:id="predictedAnnCol" prefWidth="150.0" text="Predicted Annotation" />
+                      <TableColumn fx:id="updatedAnnCol" prefWidth="143.0" text="Updated Annotation" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

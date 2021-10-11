@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wormviewerfx.WormViewerFXMainController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Static Data Visualization">
+            <content>
+                <fx:include fx:id="staticDataPane" source="WormViewerFXStatic.fxml"/>
+            </content>
+          </Tab>
+          <Tab text="Time Based Data Visualization">
+            <content>
+              <fx:include fx:id="dynamicDataPane" source="WormViewerFXDynamic.fxml"/>
+            </content>
+          </Tab>
+            <Tab text="Data Management">
+              <content>
+                <fx:include fx:id="dataManagementPane" source="WormViewerFXData.fxml"/>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

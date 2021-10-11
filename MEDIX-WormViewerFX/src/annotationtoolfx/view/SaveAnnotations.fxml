@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="274.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.SaveAnnotations">
+   <children>
+      <Label layoutX="24.0" layoutY="102.0" text="Name:" />
+      <Label layoutX="23.0" layoutY="22.0" text="Email address:" />
+      <TextField fx:id="emailText" layoutX="122.0" layoutY="17.0" prefHeight="27.0" prefWidth="343.0" />
+      <Label layoutX="24.0" layoutY="62.0" text="Password:" />
+      <PasswordField fx:id="passwordText" layoutX="121.0" layoutY="57.0" prefHeight="27.0" prefWidth="343.0" />
+      <Label fx:id="invalidLabel" layoutX="56.0" layoutY="245.0" prefHeight="18.0" prefWidth="224.0" text="Email address or password incorrect" textFill="#a80202" visible="false" />
+      <Label fx:id="nameExistsLabel" layoutX="16.0" layoutY="245.0" prefHeight="18.0" prefWidth="352.0" text="Annotation set name exists. Please enter a unique name." textFill="#a80202" visible="false" wrapText="true" />
+      <CheckBox fx:id="finalVersionCheck" layoutX="122.0" layoutY="146.0" mnemonicParsing="false" selected="true" text="Final version (will no longer be editable)" />
+      <Label fx:id="nameBlankLabel" layoutX="121.0" layoutY="245.0" text="Please enter a name" textFill="#b90404" visible="false" />
+      <ComboBox fx:id="nameCombo" editable="true" layoutX="122.0" layoutY="97.0" prefHeight="27.0" prefWidth="343.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="404.0" layoutY="231.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="okButton" defaultButton="true" layoutX="360.0" layoutY="231.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="OK" />
+      <Label fx:id="enterTimeLabel" layoutX="122.0" layoutY="182.0" text="Approximate Time Annotating:" />
+      <Label layoutX="122.0" layoutY="212.0" text="Hours: " />
+      <TextField fx:id="hoursText" layoutX="168.0" layoutY="207.0" prefHeight="27.0" prefWidth="45.0" text="0" />
+      <Label layoutX="224.0" layoutY="212.0" text="Minutes: " />
+      <TextField fx:id="minutesText" layoutX="287.0" layoutY="207.0" prefHeight="27.0" prefWidth="45.0" text="0" />
+      <Label fx:id="enterTimeLabel" layoutX="65.0" layoutY="245.0" prefHeight="18.0" prefWidth="224.0" text="Approximate time cannot be zero" textFill="#a80202" visible="false" />
+   </children>
+</AnchorPane>

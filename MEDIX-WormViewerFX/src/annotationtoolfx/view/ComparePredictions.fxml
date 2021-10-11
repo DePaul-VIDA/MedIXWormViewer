@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="280.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.ComparePredictions">
+   <children>
+      <RadioButton fx:id="predRadio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Compare with predicted annotations" />
+      <TextField fx:id="predFileText" layoutX="40.0" layoutY="37.0" prefHeight="27.0" prefWidth="465.0" />
+      <Button fx:id="chooseFileButton" layoutX="514.0" layoutY="37.0" mnemonicParsing="false" text="..." />
+      <RadioButton fx:id="noneRadio" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Don't compare with predicted annotations" />
+   </children>
+</AnchorPane>

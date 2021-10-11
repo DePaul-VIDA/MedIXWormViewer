@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.OpenVideoWizard">
+   <children>
+      <Button fx:id="finishButton" defaultButton="true" layoutX="427.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="61.0" text="Finish" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="364.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="61.0" text="Cancel" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="75.0" />
+      <Button fx:id="nextButton" layoutX="312.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" text="Next" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="139.0" />
+      <Button fx:id="backButton" layoutX="259.0" layoutY="301.0" mnemonicParsing="false" text="Back" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="192.0" />
+      <AnchorPane fx:id="controlPane" layoutX="5.0" layoutY="5.0" prefHeight="290.0" prefWidth="490.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+   </children>
+</AnchorPane>

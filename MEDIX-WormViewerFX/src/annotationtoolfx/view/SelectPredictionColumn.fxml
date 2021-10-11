@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="285.0" prefWidth="225.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="annotationtoolfx.view.SelectPredictionColumn">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Select Column..." />
+      <ListView fx:id="columnList" layoutX="13.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="cancelButton" layoutX="152.0" layoutY="251.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="okButton" layoutX="110.0" layoutY="251.0" mnemonicParsing="false" text="OK" />
+   </children>
+</AnchorPane>

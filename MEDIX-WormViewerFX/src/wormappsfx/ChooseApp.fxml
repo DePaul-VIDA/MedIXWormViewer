@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="186.0" prefWidth="276.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wormappsfx.ChooseAppController">
+   <children>
+      <RadioButton fx:id="wormViewerRadio" layoutX="73.0" layoutY="58.0" mnemonicParsing="false" text="WormAnalyzer" />
+      <RadioButton fx:id="annToolRadio" layoutX="72.0" layoutY="92.0" mnemonicParsing="false" text="WormAnnotator" />
+      <Label layoutX="24.0" layoutY="23.0" text="Select application:" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="201.0" layoutY="145.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="okButton" defaultButton="true" layoutX="154.0" layoutY="145.0" mnemonicParsing="false" text="OK" />
+   </children>
+</AnchorPane>

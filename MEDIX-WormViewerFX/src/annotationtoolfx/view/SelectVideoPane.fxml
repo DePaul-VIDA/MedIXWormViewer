@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="290.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.SelectVideoPane">
+   <children>
+      <TreeTableView fx:id="wormTableView" layoutX="5.0" layoutY="5.0" prefHeight="280.0" prefWidth="580.0">
+        <columns>
+          <TreeTableColumn fx:id="wormTypeColumn" prefWidth="89.0" text="Worm Type" />
+          <TreeTableColumn fx:id="strainIdColumn" prefWidth="147.0" text="Video" />
+            <TreeTableColumn fx:id="foodCondColumn" prefWidth="129.0" text="Food Condition" />
+            <TreeTableColumn fx:id="lengthColumn" prefWidth="76.0" text="Length" />
+            <TreeTableColumn fx:id="numAnnColumn" prefWidth="132.0" text="# of Annotation Sets" />
+        </columns>
+      </TreeTableView>
+   </children>
+</AnchorPane>

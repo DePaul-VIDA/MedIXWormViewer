@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="290.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annotationtoolfx.view.ContinueAnnotating">
+   <children>
+      <RadioButton fx:id="loadSetRadio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Continue unfinished annotations..." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <ListView fx:id="unfinishedAnnotations" layoutX="48.0" layoutY="45.0" prefHeight="128.0" prefWidth="188.0" />
+      <RadioButton fx:id="dontLoadRadio" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" text="Don't load unfinished annotations." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="190.0" />
+      <RadioButton fx:id="loadOfflineRadio" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" text="Load saved offline annotations" />
+      <TextField fx:id="offlineFile" layoutX="48.0" layoutY="249.0" prefHeight="27.0" prefWidth="451.0" />
+      <Button fx:id="chooseOfflineFile" layoutX="507.0" layoutY="249.0" mnemonicParsing="false" text="..." />
+   </children>
+</AnchorPane>

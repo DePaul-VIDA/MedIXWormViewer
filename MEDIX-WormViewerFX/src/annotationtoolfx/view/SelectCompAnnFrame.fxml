@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="290.0" prefWidth="590.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="annotationtoolfx.view.SelectCompAnnFrame">
+   <children>
+      <RadioButton fx:id="setSelectRadio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Load annotations" />
+      <ListView fx:id="finishedAnnotations" layoutX="44.0" layoutY="38.0" prefHeight="107.0" prefWidth="200.0" />
+      <RadioButton fx:id="dontLoadRadio" layoutX="14.0" layoutY="157.0" mnemonicParsing="false" text="Don't load annotations" />
+      <CheckBox fx:id="autoReviseCheck" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" text="Automatically revise annotations" />
+   </children>
+</AnchorPane>
